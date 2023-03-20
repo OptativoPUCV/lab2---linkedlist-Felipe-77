@@ -41,7 +41,7 @@ List * createList() {
 
 void * firstList(List * list) {
     
-    if (list == NULL) //si la lista esta vacia no existe primer dato
+    if (list->head == NULL) //si la lista esta vacia no existe primer dato
         return NULL;
     else{
         list->current = list->head;
