@@ -193,3 +193,14 @@ lun 20 mar 2023 17:11:15 -03:
  tests:  9|3
 total_score: 35/70
 3a96461
+lun 20 mar 2023 17:25:05 -03: 
+ list.c | 18 ++++++++----------
+ 1 file changed, 8 insertions(+), 10 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:73:29: error: implicit declaration of function ‘reutrn’ [-Werror=implicit-function-declaration]
+   73 |     if (list->head == NULL) reutrn NULL;
+      |                             ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4defdcb

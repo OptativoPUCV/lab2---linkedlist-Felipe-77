@@ -47,11 +47,8 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    if (list->current == NULL) //verificamos que el current no sea nulo
-        return NULL;
-    else if (list->current->next == NULL) { //verificamos que el current no sea el ultimo dato de la lista
-        return NULL;
-    }
+    if (list->current == NULL) return NULL; //verificamos que el current no sea nulo
+    else if (list->current->next == NULL) return NULL; //verificamos que el current no sea el ultimo dato de la lista
 
     list->current = list->current->next;
     return list->current->data;
@@ -64,17 +61,18 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-    if (list->current == NULL) //verificamos que el current no sea nulo
-        return NULL;
-    else if (list->current->prev == NULL) { //verificamos que el current no sea el primer dato de la lista
-        return NULL;
-    }
+    if (list->current == NULL) return NULL; //verificamos que el current no sea nulo
+    else if (list->current->prev == NULL) return NULL; //verificamos que el current no sea el primer dato de la lista
+
 
     list->current = list->current->prev;
     return list->current->data;
 }
 
 void pushFront(List * list, void * data) {
+    if (list->head == NULL) reutrn NULL;
+
+
 }
 
 void pushBack(List * list, void * data) {
