@@ -70,3 +70,17 @@ lun 20 mar 2023 16:39:22 -03:
  1 file changed, 1 insertion(+), 6 deletions(-)
  tests:  0|0
 7287e44
+lun 20 mar 2023 16:46:40 -03: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:44:16: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   44 |     int dato = list->head->data;
+      |                ^~~~
+list.c:45:12: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   45 |     return dato;
+      |            ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d19460f
