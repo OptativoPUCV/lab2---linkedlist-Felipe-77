@@ -95,3 +95,8 @@ lun 20 mar 2023 16:49:53 -03:
  tests:  2|5
 total_score: 15/70
 da5977f
+lun 20 mar 2023 16:53:55 -03: 
+ list.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+ tests:  0|0
+15404f2
