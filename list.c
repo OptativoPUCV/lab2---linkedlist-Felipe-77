@@ -47,14 +47,9 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    if (list->current == NULL) //verificamos que el current no sea nulo
-        return NULL;
-    else if (list->current->next == NULL) { //verificamos que el current no sea el ultimo dato de la lista
-        return NULL;
-    }
-
     list->current = list->current->next;
-    return list->current->data;
+
+    return (list->current == NULL) ? NULL : list->current->data;
 }
 
 void * lastList(List * list) {
