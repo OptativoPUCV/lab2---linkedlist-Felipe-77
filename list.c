@@ -70,7 +70,7 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
-    if (list->head == NULL) reutrn NULL;
+    if (list->head == NULL) return NULL;
 
 
 }
