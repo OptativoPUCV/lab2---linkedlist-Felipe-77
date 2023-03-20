@@ -41,7 +41,7 @@ List * createList() {
 
 void * firstList(List * list) {
     
-    if (list->head == NULL)
+    if (list == NULL) //si la lista esta vacia no existe primer dato
         return NULL;
     else{
         list->current = list->head;
@@ -50,13 +50,14 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    if (list->current == NULL)
+    if (list->current == NULL) //verificamos que el current no sea nulo
         return NULL;
-    else if (list->current->next != NULL) {
-        list->current = list->current->next;
-        return list->current->data;
+    else if (list->current->next != NULL) { //verificamos que el current no sea el ultimo dato de la lista
+        return NULL;
     }
-    return NULL;
+
+    list->current = list->current->next;
+    return list->current->data;
 }
 
 void * lastList(List * list) {

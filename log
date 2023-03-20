@@ -142,3 +142,8 @@ lun 20 mar 2023 17:00:54 -03:
  tests:  5|4
 total_score: 25/70
 4fa9637
+lun 20 mar 2023 17:03:15 -03: 
+ list.c | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+ tests:  0|0
+012cdba
