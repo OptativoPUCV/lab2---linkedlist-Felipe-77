@@ -20,3 +20,9 @@ lun 20 mar 2023 16:17:03 -03:
  tests:  1|5
 total_score: 10/70
 41afbf2
+lun 20 mar 2023 16:20:16 -03: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+83630ca

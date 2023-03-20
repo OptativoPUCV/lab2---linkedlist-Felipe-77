@@ -41,7 +41,7 @@ List * createList() {
 
 void * firstList(List * list) {
     
-    Node * first = createNode(NULL);
+    Node * first = (Node *) malloc(sizeof(Node));
     first = list->head;
     list->current = first;
     
