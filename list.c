@@ -41,12 +41,9 @@ List * createList() {
 
 void * firstList(List * list) {
     
-    if (list == NULL) //si la lista esta vacia no existe primer dato
-        return NULL;
-    else{
-        list->current = list->head;
-        return list->head->data;
-    }
+    list->current = list->head;
+
+    return (list->head == NULL) ? NULL : list->head->data;
 }
 
 void * nextList(List * list) {

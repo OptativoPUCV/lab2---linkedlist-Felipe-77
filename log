@@ -164,3 +164,9 @@ lun 20 mar 2023 17:04:06 -03:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 8c3d4a3
+lun 20 mar 2023 17:06:11 -03: 
+ list.c | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+ tests:  5|4
+total_score: 25/70
+4057499
