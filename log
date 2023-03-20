@@ -270,3 +270,9 @@ list.c:90:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 0396b47
+lun 20 mar 2023 20:35:15 -03: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  10|2
+total_score: 45/70
+a0432e8
