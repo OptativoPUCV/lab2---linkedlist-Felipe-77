@@ -125,3 +125,14 @@ lun 20 mar 2023 16:58:46 -03:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 5df4a42
+lun 20 mar 2023 17:00:26 -03: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:59:1: error: control reaches end of non-void function [-Werror=return-type]
+   59 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+95fd626
