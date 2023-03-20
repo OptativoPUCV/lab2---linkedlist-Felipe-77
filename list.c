@@ -41,7 +41,7 @@ List * createList() {
 
 void * firstList(List * list) {
     
-    if (list->head == NULL)
+    if (list == NULL)
         return NULL;
     else{
         list->current = list->head;
@@ -50,7 +50,7 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    if (list->current->next == NULL)
+    if (list == NULL)
         return NULL;
     else{
         list->current = list->current->next;
