@@ -218,3 +218,9 @@ list.c:72:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 f1e3ff5
+lun 20 mar 2023 17:25:55 -03: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  9|3
+total_score: 35/70
+5908f4c
