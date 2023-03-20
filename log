@@ -250,3 +250,9 @@ lun 20 mar 2023 17:33:52 -03:
  tests:  9|3
 total_score: 35/70
 1e2bfaa
+lun 20 mar 2023 17:35:02 -03: 
+ list.c | 2 ++
+ 1 file changed, 2 insertions(+)
+ tests:  10|2
+total_score: 45/70
+7796396
