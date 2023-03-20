@@ -41,7 +41,7 @@ List * createList() {
 
 void * firstList(List * list) {
     
-    if (list == NULL)
+    if (list->head == NULL)
         return NULL;
     else{
         list->current = list->head;
