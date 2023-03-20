@@ -40,7 +40,12 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-    return NULL;
+    
+    Node * first = list->head;
+    list->current = first;
+    
+    
+    return first;
 }
 
 void * nextList(List * list) {
