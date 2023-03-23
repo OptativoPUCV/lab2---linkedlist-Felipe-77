@@ -74,7 +74,7 @@ void * prevList(List * list) {
 void pushFront(List * list, void * data) {
     Node * new = createNode(data);
 
-    if (list->head == NULL) list->head = list->tail = new; //Si la lista esta vacia, creamos el dato, el cual seria head y tail a la vez
+    if (!list->head) list->head = list->tail = new; //Si la lista esta vacia, creamos el dato, el cual seria head y tail a la vez
     else {
         list->head->prev = new;
         new->next = list->head;
@@ -90,7 +90,7 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
-    if (list){ //Verificamos que exista lista
+    if (list->current){ //Verificamos que la lista tenga elementos
         Node * new = createNode(data);
         new->prev = list->current;
 
@@ -138,7 +138,7 @@ void * popCurrent(List * list) {
         return dato;
     }
 
-    if (list){
+    if (list->head){
         Node * aux = list->current;
 
         list->current->next->prev = list->current->prev;
