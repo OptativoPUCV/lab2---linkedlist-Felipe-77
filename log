@@ -413,3 +413,9 @@ jue 23 mar 2023 13:00:28 -03:
  tests:  12|0
 total_score: 70/70
 f232e8f
+jue 23 mar 2023 13:07:58 -03: 
+ list.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+ tests:  11|1
+total_score: 60/70
+5e0160a
