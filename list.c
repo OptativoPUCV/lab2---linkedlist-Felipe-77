@@ -50,7 +50,7 @@ void * firstList(List * list) {
 
 void * nextList(List * list) {
     if (list->current == NULL) return NULL; //verificamos que el current no sea nulo
-    else if (list->current->next == NULL) return NULL; //verificamos que el current no sea el ultimo dato de la lista
+    if (list->current->next == NULL) return NULL; //verificamos que el current no sea el ultimo dato de la lista
 
     list->current = list->current->next;
     return list->current->data;
