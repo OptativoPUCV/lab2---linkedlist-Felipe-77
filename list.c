@@ -74,7 +74,7 @@ void * prevList(List * list) {
 void pushFront(List * list, void * data) {
     Node * new = createNode(data);
 
-    if (!list->head) list->head = list->tail = new; //Si la lista esta vacia, creamos el dato, el cual seria head y tail a la vez
+    if (!list->head) list->head = list->tail = new; //Si la lista esta vacia el dato seria head y tail a la vez
     else {
         list->head->prev = new;
         new->next = list->head;
@@ -114,41 +114,41 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    if (list->current == list->head){
+
+    if (!list->head) return NULL; //Primero verificamos que la lista tenga datos
+
+    if (list->current == list->head){  //Esta comparación verifica si el current es el primer dato de la lista
         Node * aux = list->current;
 
-        list->head = list->current->next;
+        list->head = list->current->next;  //Actualización del head
         list->head->prev = NULL;
 
-        void * dato = aux->data;
+        void * dato = aux->data;  //Guardamos el dato para retornar 
 
-        free(aux);
+        free(aux);  
         return dato;
     }
 
-    if (list->current == list->tail){
+    if (list->current == list->tail){  //Esta comparación verifica si el current es el primer dato de la lista.
         Node * aux = list->current;
 
-        list->tail = list->current->prev;
+        list->tail = list->current->prev;  //Actualización de tail
         list->tail->next = NULL;
 
-        void* dato = aux->data;
+        void* dato = aux->data;  //Guardamos el dato para retornar
 
         free(aux);
         return dato;
     }
+    
+    //Si la ejecucion de la funcion llega a este punto, el dato current esta ubicado en algun punto entre head y tail de la lista
+    Node * aux = list->current;
 
-    if (list->head){
-        Node * aux = list->current;
-
-        list->current->next->prev = list->current->prev;
-        list->current->prev->next = list->current->next;
-
-        void* dato = aux->data;
-        free(aux);
-        return dato;
-    }
-    return NULL;
+    list->current->next->prev = list->current->prev;
+    list->current->prev->next = list->current->next;
+    void* dato = aux->data;
+    free(aux);
+    return dato;
 }
 
 void cleanList(List * list) {
