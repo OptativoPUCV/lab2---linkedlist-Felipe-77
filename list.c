@@ -42,11 +42,10 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-    if (list){
-        list->current = list->head;
-        return list->head->data;
-    }
-    return NULL;
+    
+    list->current = list->head;
+
+    return (list->head == NULL) ? NULL : list->head->data;
 }
 
 void * nextList(List * list) {
@@ -118,11 +117,40 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    /*if (list){
+    if (list->current == list->head){
+        Node * aux = list->current;
 
+        list->head = list->current->next;
+        list->head->prev = NULL;
 
+        int dato = aux->data;
 
-    }*/
+        free(aux);
+        return dato;
+    }
+
+    if (list->current == list->tail){
+        Node * aux = list->current;
+
+        list->tail = list->current->prev;
+        list->head->next = NULL;
+
+        int dato = aux->data;
+
+        free(aux);
+        return dato;
+    }
+
+    if (list){
+        Node * aux = list->current;
+
+        list->current->next->prev = list->current->prev;
+        list->current->next->prev = list->current->next;
+
+        int dato = aux->data;
+        free(aux);
+        return dato;
+    }
     return NULL;
 }
 

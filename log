@@ -369,3 +369,29 @@ jue 23 mar 2023 12:46:05 -03:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 89bcece
+jue 23 mar 2023 12:54:01 -03: 
+ list.c | 40 ++++++++++++++++++++++++++++++++++------
+ 1 file changed, 34 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:126:20: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  126 |         int dato = aux->data;
+      |                    ^~~
+list.c:129:16: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+  129 |         return dato;
+      |                ^~~~
+list.c:138:20: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  138 |         int dato = aux->data;
+      |                    ^~~
+list.c:141:16: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+  141 |         return dato;
+      |                ^~~~
+list.c:150:20: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  150 |         int dato = aux->data;
+      |                    ^~~
+list.c:152:16: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+  152 |         return dato;
+      |                ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+1586c3b
