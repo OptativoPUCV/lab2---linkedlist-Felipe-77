@@ -294,3 +294,14 @@ mar 21 mar 2023 09:33:19 -03:
  tests:  11|1
 total_score: 55/70
 721fcde
+jue 23 mar 2023 09:31:33 -03: 
+ list.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:35:16: error: returning ‘int’ from a function with return type ‘List *’ {aka ‘struct List *’} makes pointer from integer without a cast [-Werror=int-conversion]
+   35 |         return EXIT_FAILURE;
+      |                ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ce594c2
