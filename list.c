@@ -42,10 +42,11 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-    
-    list->current = list->head;
-
-    return (list->head == NULL) ? NULL : list->head->data;
+    if (list){
+        list->current = list->head;
+        return list->head->data;
+    }
+    return;
 }
 
 void * nextList(List * list) {
@@ -117,7 +118,12 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+    /*if (list){
+
+
+
+    }*/
+    return;
 }
 
 void cleanList(List * list) {
