@@ -46,7 +46,7 @@ void * firstList(List * list) {
         list->current = list->head;
         return list->head->data;
     }
-    return;
+    return NULL;
 }
 
 void * nextList(List * list) {
@@ -123,7 +123,7 @@ void * popCurrent(List * list) {
 
 
     }*/
-    return;
+    return NULL;
 }
 
 void cleanList(List * list) {

@@ -364,3 +364,8 @@ list.c:120:8: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 a18bd6e
+jue 23 mar 2023 12:46:05 -03: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|0
+89bcece
