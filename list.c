@@ -105,7 +105,7 @@ void pushCurrent(List * list, void * data) {
         return;
     }
 
-    return NULL;
+    return;
 }
 
 void * popFront(List * list) {
